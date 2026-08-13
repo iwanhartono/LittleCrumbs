@@ -32,7 +32,18 @@ struct AboutView: View {
                     )
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(Color("AppBackground"))
             .navigationTitle("About")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink {
+                        SettingsView()
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                }
+            }
             .task {
                 config = try? await repository.fetchConfig()
             }

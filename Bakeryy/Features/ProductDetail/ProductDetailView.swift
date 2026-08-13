@@ -27,6 +27,7 @@ struct ProductDetailView: View {
             .padding()
             .padding(.bottom, 60)
         }
+        .background(Color("AppBackground"))
         .safeAreaInset(edge: .bottom) {
             addToOrderBar
         }

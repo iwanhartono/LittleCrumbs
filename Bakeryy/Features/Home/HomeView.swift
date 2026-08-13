@@ -27,6 +27,7 @@ struct HomeView: View {
             }
             .padding()
         }
+        .background(Color("AppBackground"))
         .navigationTitle(viewModel.config?.bakeryName ?? "Bakeryy")
         .task { await viewModel.load() }
         .refreshable { await viewModel.load() }
@@ -84,7 +85,7 @@ struct HomeView: View {
                 .controlSize(.large)
             }
             .padding()
-            .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 16))
+            .background(Color("CardBackground"), in: RoundedRectangle(cornerRadius: 16))
         }
     }
 

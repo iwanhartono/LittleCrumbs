@@ -11,6 +11,7 @@ struct OrderBagView: View {
         Group {
             if orderBag.items.isEmpty {
                 emptyState
+                    .background(Color("AppBackground"))
             } else {
                 List {
                     Section("Items") {
@@ -18,12 +19,16 @@ struct OrderBagView: View {
                             itemRow(item)
                         }
                     }
+                    .listRowBackground(Color("CardBackground"))
                     Section {
                         summaryRow(title: "Subtotal", value: orderBag.subtotal)
                         summaryRow(title: "Delivery Fee (if delivery)", value: deliveryFee)
                         summaryRow(title: "Estimated Total", value: orderBag.subtotal + deliveryFee, emphasized: true)
                     }
+                    .listRowBackground(Color("CardBackground"))
                 }
+                .scrollContentBackground(.hidden)
+                .background(Color("AppBackground"))
             }
         }
         .navigationTitle("Order Bag")

@@ -53,6 +53,8 @@ struct CustomerInfoView: View {
                 summaryRow(title: "Estimated Total", value: estimatedTotal, emphasized: true)
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(Color("AppBackground"))
         .navigationTitle("Your Order")
         .navigationBarTitleDisplayMode(.inline)
         .task {

@@ -30,5 +30,7 @@ struct RootTabView: View {
                 .tabItem { Label("About", systemImage: "info.circle.fill") }
                 .tag(Tab.about)
         }
+        .toolbarBackground(Color("AppBackground"), for: .tabBar)
+        .toolbarBackground(.visible, for: .tabBar)
     }
 }

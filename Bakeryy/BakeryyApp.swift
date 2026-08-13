@@ -13,6 +13,8 @@ struct BakeryyApp: App {
     private let modelContainer: ModelContainer
     private let repository: BakeryRepositoryProtocol
     @State private var orderBagStore = OrderBagStore()
+    @State private var appIconController = AppIconController(settingsStore: AppSettingsStore())
+    @State private var themeController = AppThemeController(settingsStore: AppSettingsStore())
 
     init() {
         do {
@@ -32,6 +34,9 @@ struct BakeryyApp: App {
         WindowGroup {
             RootTabView(repository: repository)
                 .environment(orderBagStore)
+                .environment(appIconController)
+                .environment(themeController)
+                .preferredColorScheme(themeController.preference.colorScheme)
         }
         .modelContainer(modelContainer)
     }

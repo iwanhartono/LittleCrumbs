@@ -10,6 +10,8 @@ struct MyOrdersPlaceholderView: View {
                 systemImage: "bag.badge.clock",
                 description: Text("Order tracking is on its way. For now, the bakery will confirm your order directly on WhatsApp or Instagram.")
             )
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color("AppBackground"))
             .navigationTitle("My Orders")
         }
     }

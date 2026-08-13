@@ -46,10 +46,13 @@ struct MenuView: View {
                         NavigationLink(value: OrderingRoute.product(product)) {
                             ProductCardView(product: product)
                         }
+                        .listRowBackground(Color("AppBackground"))
                     }
                 }
                 .listStyle(.plain)
+                .scrollContentBackground(.hidden)
             }
+            .background(Color("AppBackground"))
         }
     }
 
@@ -74,20 +77,19 @@ struct MenuView: View {
     }
 
     private var categoryFilter: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                categoryChip(title: "All", isSelected: viewModel.selectedCategory == nil) {
-                    viewModel.selectedCategory = nil
-                }
-                ForEach(ProductCategory.allCases) { category in
-                    categoryChip(title: category.displayName, isSelected: viewModel.selectedCategory == category) {
-                        viewModel.selectedCategory = category
-                    }
+        HStack {
+            categoryChip(title: "All", isSelected: viewModel.selectedCategory == nil) {
+                viewModel.selectedCategory = nil
+            }
+            ForEach(ProductCategory.allCases) { category in
+                categoryChip(title: category.displayName, isSelected: viewModel.selectedCategory == category) {
+                    viewModel.selectedCategory = category
                 }
             }
-            .padding(.horizontal)
-            .padding(.vertical, 8)
+            Spacer(minLength: 0)
         }
+        .padding(.horizontal)
+        .padding(.vertical, 8)
     }
 
     private func categoryChip(title: String, isSelected: Bool, action: @escaping () -> Void) -> some View {
