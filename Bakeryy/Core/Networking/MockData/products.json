@@ -1,0 +1,77 @@
+[
+  {
+    "id": "milk-bread",
+    "name": "Milk Bread",
+    "shortDescription": "Soft and fluffy classic",
+    "description": "Our signature soft milk bread, baked fresh every batch with a light, pillowy crumb.",
+    "ingredients": "Wheat flour, milk, butter, sugar, yeast, salt",
+    "imageSystemName": "takeoutbag.and.cup.and.straw.fill",
+    "category": "bread",
+    "basePrice": 28000,
+    "isAvailable": true,
+    "variants": []
+  },
+  {
+    "id": "chocolate-bread",
+    "name": "Chocolate Bread",
+    "shortDescription": "Rich chocolate filling",
+    "description": "Soft bread swirled with rich, melty chocolate filling in every bite.",
+    "ingredients": "Wheat flour, milk, butter, sugar, yeast, dark chocolate, salt",
+    "imageSystemName": "birthday.cake.fill",
+    "category": "bread",
+    "basePrice": 30000,
+    "isAvailable": true,
+    "variants": []
+  },
+  {
+    "id": "cheese-bread",
+    "name": "Cheese Bread",
+    "shortDescription": "Loaded with cheese",
+    "description": "Soft bread loaded with real cheese, baked until golden and gooey.",
+    "ingredients": "Wheat flour, milk, butter, sugar, yeast, cheese, salt",
+    "imageSystemName": "circle.grid.cross.fill",
+    "category": "bread",
+    "basePrice": 30000,
+    "isAvailable": true,
+    "variants": [
+      { "id": "regular", "name": "Regular", "priceDelta": 0 },
+      { "id": "extra-cheese", "name": "Extra Cheese", "priceDelta": 5000 }
+    ]
+  },
+  {
+    "id": "cinnamon-roll",
+    "name": "Cinnamon Roll",
+    "shortDescription": "Sweet & fragrant roll",
+    "description": "Classic cinnamon roll with a warm spiced swirl and sweet glaze.",
+    "ingredients": "Wheat flour, butter, sugar, cinnamon, yeast, icing",
+    "imageSystemName": "tornado",
+    "category": "pastries",
+    "basePrice": 35000,
+    "isAvailable": false,
+    "variants": []
+  },
+  {
+    "id": "garlic-bread",
+    "name": "Garlic Bread",
+    "shortDescription": "Buttery & savory",
+    "description": "Savory bread brushed with garlic butter and herbs.",
+    "ingredients": "Wheat flour, butter, garlic, parsley, salt, yeast",
+    "imageSystemName": "leaf.fill",
+    "category": "bread",
+    "basePrice": 28000,
+    "isAvailable": true,
+    "variants": []
+  },
+  {
+    "id": "family-bundle",
+    "name": "Family Bundle",
+    "shortDescription": "4 assorted breads, great value",
+    "description": "A mix of our most popular breads, bundled together for a better price.",
+    "ingredients": "Varies by included breads",
+    "imageSystemName": "shippingbox.fill",
+    "category": "bundles",
+    "basePrice": 95000,
+    "isAvailable": true,
+    "variants": []
+  }
+]
