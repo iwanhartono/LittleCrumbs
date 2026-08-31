@@ -1,0 +1,16 @@
+{
+  "bakeryName": "Happy Bread",
+  "tagline": "Home-baked bread, made with love.",
+  "whatsappNumber": "0812-3456-7890",
+  "instagramHandle": "happybread.id",
+  "deliveryFee": 10000,
+  "announcements": [
+    "New: Garlic Bread is back on the menu this batch!"
+  ],
+  "payment": {
+    "bankName": "BCA",
+    "accountNumber": "1234567890",
+    "accountHolder": "Happy Bread",
+    "instructions": "Please send payment proof after transfer. Thank you!"
+  }
+}
